@@ -30,7 +30,7 @@ public class RegistrationTests {
     @Test
     public void registrationAnyError() throws IOException {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        AuthRequestDto auth= AuthRequestDto.builder().username("gen"+i+"@bk.ru").password("Od123456$").build();
+        AuthRequestDto auth= AuthRequestDto.builder().username("genbk.ru").password("Od123456$").build();
         RequestBody body = RequestBody.create(Provider.getInstance().getGson().toJson(auth),Provider.getInstance().getJson());
         Request request=new Request.Builder()
                 .url("https://contactapp-telran-backend.herokuapp.com/v1/user/registration/usernamepassword")
@@ -41,9 +41,8 @@ public class RegistrationTests {
         Assert.assertEquals(response.code(),400);
         ErrorDto errorDto = Provider.getInstance().getGson().fromJson(response.body().string(), ErrorDto.class);
         Object message= errorDto.getMessage().toString();
-        Assert.assertEquals(message, "Any other error");
+        Assert.assertEquals(message,"{username=must be a well-formed email address}");
         Assert.assertEquals(errorDto.getStatus(),400);
-
 
 
     }

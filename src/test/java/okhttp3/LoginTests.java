@@ -46,5 +46,5 @@ Response response=Provider.getInstance().getClient().newCall(request).execute();
        Assert.assertEquals(errorDto.getStatus(),401);
     }
 
-    //eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoiZ2Vuc2l0c2theWFAYmsucnUiLCJpc3MiOiJSZWd1bGFpdCIsImV4cCI6MTY2OTY1NDQ3MSwiaWF0IjoxNjY5MDU0NDcxfQ.RYo7A7JtUYtExySVo1Bi5gRYatVTzHBbgeE0nL1rMo0;
+    //eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoiZ2Vuc2l0c2theWFAYmsucnUiLCJpc3MiOiJSZWd1bGFpdCIsImV4cCI6MTY2OTY1NDQ3MSwiaWF0IjoxNjY5MDU0NDcxfQ.RYo7A7JtUYtExySVo1Bi5gRYatVTzHBbgeE0nL1rMo0
 }
