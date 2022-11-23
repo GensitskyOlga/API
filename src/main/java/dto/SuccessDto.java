@@ -12,4 +12,7 @@ import lombok.ToString;
 
 public class SuccessDto {
     private String message;
-}
+
+
+    }
+

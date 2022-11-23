@@ -28,7 +28,7 @@ public class RegistrationTests {
     }
 
     @Test
-    public void registrationAnyError() throws IOException {
+    public void registrationWrongEmail() throws IOException {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         AuthRequestDto auth= AuthRequestDto.builder().username("genbk.ru").password("Od123456$").build();
         RequestBody body = RequestBody.create(Provider.getInstance().getGson().toJson(auth),Provider.getInstance().getJson());
